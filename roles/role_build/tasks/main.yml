@@ -21,4 +21,3 @@
     src: "{ { puth_java_app } }/target/{ { name_war } }"
     dest: "{ { puth_tomcat } }"
     remote_src: yes
-
