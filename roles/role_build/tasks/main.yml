@@ -14,9 +14,11 @@
   git:
     repo: "{{ url_git }}"
     dest: "{{ puth_java_app }}"
-    force: yes
-  notify:
-    - mvn package
+
+- name: Run command mvn package
+  command:
+    chdir: "{{ puth_java_app }}"
+    cmd: mvn package
 
 - name: Copying a .war to a tomcat9/webapps
   copy:
