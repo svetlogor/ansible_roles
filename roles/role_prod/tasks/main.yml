@@ -7,6 +7,6 @@
 
 - name: Transfer files from Build to Prod
   synchronize:
-    src: { { puth_tomcat } }/{ { name_war } }
-    dest: { { puth_tomcat } }
-  delegate_to: { { server_build_ip } }
+    src: "{ { puth_tomcat } }/{ { name_war } }"
+    dest: "{ { puth_tomcat } }"
+  delegate_to: "{ { server_build_ip } }"
