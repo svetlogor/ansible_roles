@@ -1,6 +1,6 @@
 ---
 # tasks file for role_build
-- name: Installing packages. Ensure package is present
+- name: installing packages
   apt:
     - name: "{{ item }}"
     - state: present
