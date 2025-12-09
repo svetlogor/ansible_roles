@@ -10,7 +10,7 @@
 - name: Cloning a repository
   git:
     repo: "{ { url_git } }"
-    dest: { { puth_java_app } }
+    dest: "{ { puth_java_app } }"
   notify: mvn package
 
 - name: Copying a { { name_war } } to a { { puth_tomcat } }
