@@ -1,0 +1,12 @@
+---
+# tasks file for role_prod
+- name: Installing packages. Ensure { { item } } package is present
+  apt: name={ { item } } state=present update_cache=true
+  with_items:
+    - tomcat9
+
+- name: Transfer files from Build to Prod
+  synchronize:
+    src: "{ { puth_tomcat } }/{ { name_war } }"
+    dest: "{ { puth_tomcat } }"
+  delegate_to: "{ { server_build_ip } }"
