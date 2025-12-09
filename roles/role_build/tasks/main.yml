@@ -9,7 +9,7 @@
 
 - name: Cloning a repository
   git:
-    repo: { { url_git } }
+    repo: {{ url_git }}
     dest: { { puth_java_app } }
   notify: mvn package
 
