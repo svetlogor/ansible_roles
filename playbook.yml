@@ -1,0 +1,14 @@
+---
+- name: bootstrapping server Build
+  hosts: build
+  become: yes
+
+  role:
+    - build
+
+- name: bootstrapping server Prod
+  hosts: prod
+  become: yes
+
+  role:
+    - prod
