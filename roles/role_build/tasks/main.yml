@@ -2,7 +2,7 @@
 # tasks file for role_build
 - name: Installing packages. Ensure "{{ item }}" package is present
   apt:
-    - name: {{ item }}
+    - name: "{{ item }}"
     - state: present
     - update_cache: yes
   with_items:
@@ -12,7 +12,7 @@
 
 - name: Cloning a repository
   git:
-    repo: {{ url_git }}
+    repo: "{{ url_git }}"
     dest: "{ { puth_java_app } }"
   notify: mvn package
 
