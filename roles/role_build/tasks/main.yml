@@ -14,6 +14,7 @@
   git:
     repo: "{{ url_git }}"
     dest: "{{ puth_java_app }}"
+    force: yes
   notify:
     - mvn package
 
