@@ -1,6 +1,6 @@
 ---
 # tasks file for role_build
-- name: Installing packages. Ensure package is present
+- name: Installing packages. Ensure "{{ item }}" package is present
   apt:
     - name: "{{ item }}"
     - state: present
@@ -16,7 +16,7 @@
     dest: "{ { puth_java_app } }"
   notify: mvn package
 
-- name: Copying a { { name_war } } to a { { puth_tomcat } }
+- name: Copying a "{{ name_war }}" to a "{{ puth_tomcat }}"
   copy:
     src: "{ { puth_java_app } }/target/{ { name_war } }"
     dest: "{ { puth_tomcat } }"
