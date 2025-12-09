@@ -13,11 +13,11 @@
 - name: Cloning a repository
   git:
     repo: "{{ url_git }}"
-    dest: "{ { puth_java_app } }"
+    dest: "{{ puth_java_app }}"
   notify: mvn package
 
 - name: Copying a "{{ name_war }}" to a "{{ puth_tomcat }}"
   copy:
-    src: "{ { puth_java_app } }/target/{ { name_war } }"
-    dest: "{ { puth_tomcat } }"
+    src: "{{ puth_java_app }}/target/{{ name_war }}"
+    dest: "{{ puth_tomcat }}"
     remote_src: yes
