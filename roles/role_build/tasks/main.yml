@@ -6,9 +6,9 @@
     - state: present
     - update_cache: yes
   with_items:
-    - "default-jdk"
-    - "maven"
-    - "tomcat9"
+      - "default-jdk"
+      - "maven"
+      - "tomcat9"
 
 - name: Cloning a repository
   git:
