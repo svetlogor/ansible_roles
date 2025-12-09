@@ -16,6 +16,6 @@
 - name: Copying a { { name_war } } to a { { puth_tomcat } }
   copy:
     src: "{ { puth_java_app } }/target/{ { name_war } }"
-    dest: { { puth_tomcat } }
+    dest: "{ { puth_tomcat } }"
     remote_src: yes
 
