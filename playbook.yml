@@ -4,11 +4,11 @@
   become: yes
 
   roles:
-    - build
+    - role_build
 
 - name: bootstrapping server Prod
   hosts: prod
   become: yes
 
   roles:
-    - prod
+    - role_prod
