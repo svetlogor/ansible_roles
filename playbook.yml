@@ -3,12 +3,12 @@
   hosts: build
   become: yes
 
-  role:
+  roles:
     - build
 
 - name: bootstrapping server Prod
   hosts: prod
   become: yes
 
-  role:
+  roles:
     - prod
