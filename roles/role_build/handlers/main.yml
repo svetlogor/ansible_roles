@@ -1,0 +1,6 @@
+---
+# handlers file for role_build
+- name: mvn package
+  command:
+    chdir: { { puth_java_app } }
+    cmd: mvn package
